@@ -5,35 +5,46 @@ import {
   InputAdornment,
   TextField,
 } from '@material-ui/core';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import operations from '../redux/auth/auth-operations';
 import LockIcon from '@material-ui/icons/Lock';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
-function LoginView({ onLogin }) {
+function LoginView() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch();
+  const onLogin = useCallback(
+    ({ email, password }) => dispatch(operations.logIn({ email, password })),
+    [dispatch],
+  );
 
-  const handleSumbit = e => {
-    e.preventDefault();
+  const handleSumbit = ({ email, password }) => {
     onLogin({ email, password });
     setEmail('');
     setPassword('');
   };
 
-  const handleClickShowPassword = () => {
+  const handleClickShowPassword = useCallback(() => {
     setShowPassword(prevShowPassword => !prevShowPassword);
-  };
+  }, []);
 
   const handleMouseDownPassword = e => {
     e.preventDefault();
   };
+
   return (
     <>
-      <form onSubmit={handleSumbit} className="login_form">
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          handleSumbit({ email, password });
+        }}
+        className="login_form"
+      >
         <Avatar className="formAvatar">
           <LockIcon color="action" />
         </Avatar>
@@ -99,8 +110,4 @@ function LoginView({ onLogin }) {
   );
 }
 
-const mapDispatchToProps = {
-  onLogin: operations.logIn,
-};
-
-export default connect(null, mapDispatchToProps)(LoginView);
+export default LoginView;
