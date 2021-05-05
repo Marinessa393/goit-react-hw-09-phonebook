@@ -1,0 +1,27 @@
+.header {
+  background-color: #212121;
+  box-shadow: 3px 0 15px -2px #f5f5f5;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlink_main {
+  color: #78909c;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navlink_contacts {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.activenavlink {
+  border-bottom: 2px solid #f50057;
+}

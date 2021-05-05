@@ -1,0 +1,11 @@
+.userMenu {
+  display: flex;
+  align-items: center;
+}
+
+.greeting {
+  margin: 0;
+  margin-right: 10px;
+  font-weight: 500;
+  color: aliceblue;
+}

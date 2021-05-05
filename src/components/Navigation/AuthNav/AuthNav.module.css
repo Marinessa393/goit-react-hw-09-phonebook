@@ -1,0 +1,18 @@
+.authlink_reg {
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.authlink_log {
+  color: #f50057;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.activeauthlink {
+  border-bottom: 2px solid #f50057;
+}
