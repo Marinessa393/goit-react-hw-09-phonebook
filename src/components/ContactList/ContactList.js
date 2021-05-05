@@ -111,7 +111,7 @@ function ContactList() {
             <TableRow>
               <TablePagination
                 // className={classes.text}
-                rowsPerPageOptions={[4, 8]}
+                rowsPerPageOptions={[5, 10]}
                 colSpan={4}
                 count={items.length}
                 rowsPerPage={rowsPerPage}
