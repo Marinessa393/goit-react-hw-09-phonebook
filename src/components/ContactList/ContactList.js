@@ -40,8 +40,8 @@ function ContactList() {
                 type="button"
                 className="ContactList__btn"
                 onClick={() => onDelete(id)}
-                color="primary"
-                variant="contained"
+                color="secondary"
+                size="small"
               >
                 <Delete />
               </Button>
