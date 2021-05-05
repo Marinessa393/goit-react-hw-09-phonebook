@@ -32,7 +32,7 @@ function Copyright() {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: 'calc(100vh - 50px)',
+    height: 'calc(100vh - 64px)',
   },
   image: {
     backgroundImage:
@@ -126,6 +126,7 @@ function LoginView() {
                 variant="outlined"
                 margin="normal"
                 color="secondary"
+                size="small"
                 onChange={event => setEmail(event.target.value)}
               />
               <TextField
@@ -139,6 +140,7 @@ function LoginView() {
                 variant="outlined"
                 margin="normal"
                 color="secondary"
+                size="small"
                 autoComplete="current-password"
                 onChange={event => setPassword(event.target.value)}
                 InputProps={{
@@ -161,6 +163,7 @@ function LoginView() {
                 variant="contained"
                 color="secondary"
                 className={classes.submit}
+                size="small"
               >
                 Login
               </Button>
