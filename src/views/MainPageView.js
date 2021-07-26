@@ -31,8 +31,8 @@ const styles = {
 const MainPageView = () => {
   return (
     <div style={styles.div}>
-      <h1 style={styles.h1}>Hello everybody, my name is Verka Serdyuchka</h1>
-      <p style={styles.strong}>Let`s begin to dance!</p>
+      <h1 style={styles.h1}>Welcome to Phonebook</h1>
+      <p style={styles.strong}>Save all your contacts in one place</p>
       <NavLink
         to="/login"
         exact
